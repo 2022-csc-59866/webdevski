@@ -39,7 +39,8 @@ nav{
     color: rgb(41, 20, 20);
     text-decoration: none;
 }
-.information{
+
+/*.information{
     width: 1000px;
     height: 1000px;
     position: absolute;
@@ -54,4 +55,4 @@ nav{
     top: 50%;
     left: -10%;
     transform: translate(-50);
-}
+}*/
