@@ -5,10 +5,10 @@
 }
 /*--NAVIGATION MENU--*/
 nav{
-    width: 100%;
+    width: 80%;
     position: fixed;
-    height: auto;
-    z-index: -1;
+    margin: 20px auto;
+    z-index: 1;
     display: flex;
     align-items: center;
 }
