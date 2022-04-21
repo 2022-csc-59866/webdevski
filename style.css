@@ -3,7 +3,7 @@
     padding: 0;
     font-family: inherit;
 }
-
+/*--NAVIGATION MENU--*/
 nav{
     width: 80%;
     position: sticky;
@@ -34,6 +34,12 @@ nav{
     text-decoration: none;
 }
 
+/*--HOME SCREEN--*/
+body .home{
+  display: flex;
+  background: url("https://cdn.glitch.global/65bd84b8-6829-4701-9157-6be80ce8c23b/1657858.jpg?v=1650512863754") no-repeat center;
+  background-size: cover;
+}
 /*.information{
     width: 1000px;
     height: 1000px;
