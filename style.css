@@ -8,6 +8,15 @@ html {
   margin: auto;
 }
 
+/*----GOOGLE FONT IMPORT----*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 /*--NAVIGATION MENU--*/
 .navbar{
     width: 100%;
@@ -17,6 +26,7 @@ html {
     margin: 20px 0;
     z-index: 999;
     transition: all 0.3s ease;
+    font-family: 'Ubuntu', sans-serif
 }
 
 .navbar.sticky {
@@ -54,14 +64,33 @@ html {
 }
 
 /*--HOME SCREEN--*/
-body .home{
+.home{
   display: flex;
   background: url("https://cdn.glitch.global/65bd84b8-6829-4701-9157-6be80ce8c23b/1657858.jpg?v=1650512863754") no-repeat center;
   background-size: cover;
   margin: -8px;
   height: 103vh;
   color: #FCF5E5;
-  min-height: 500px; 
+  min-height: 500px;
+  font-family: 'Ubuntu', sans-serif
+}
+
+.home .home-content a{
+  display: inline-block;
+  text-decoration: none;
+  background: #f15416;
+  color: #FCF5E5;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 2px solid #f15416;
+  transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+  color:#FCF5E5;
+  background: #f3713d;
 }
 /*.information{
     width: 1000px;
