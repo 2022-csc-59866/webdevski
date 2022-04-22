@@ -103,7 +103,27 @@ html {
   font-weight: 700;
   color: #FCF5E5;
   letter-spacing: 1px;
+  overflow: hidden;
+  animation: typewriter 2s steps(13) infinite alternate,
+          blink 800ms steps(13) infinite normal;
+  border-right: 5px solid black;
 }
+      @keyframes typewriter {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 50%;
+        }
+      }
+      @keyframes blink {
+        from {
+          border-color: black;
+        }
+        to {
+          border-color: transparent;
+        }
+      }
 
 .home .home-content a{
   display: inline-block;
