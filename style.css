@@ -97,15 +97,16 @@ html {
 }
 .home .home-content .text2 {
   margin-top: 30px;
+  margin-left: 330px;
   margin-bottom: 25px;
   font-size: 84px;
   text-transform: uppercase;
   font-weight: 700;
   color: #FCF5E5;
   letter-spacing: 1px;
+  white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 2s steps(13) infinite alternate,
-          blink 800ms steps(13) infinite normal;
+  animation: typewriter 2s steps(13) infinite alternate, blink 800ms steps(13) infinite normal;
   border-right: 5px solid black;
 }
       @keyframes typewriter {
