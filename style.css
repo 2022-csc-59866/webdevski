@@ -1,17 +1,34 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
+html {
+  scroll-behavior: smooth;
 }
+
+.max-width{
+  max-width: screen;
+  padding: 0 80px;
+  margin: auto;
+}
+
 /*--NAVIGATION MENU--*/
 .navbar{
-    width: 80%;
+    width: 100%;
+    height: auto;
     position: fixed;
     padding: 30px 0;
     margin: 20px 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 20px 0;
+  left: 0;
+  background: #5756586b;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar .logo{
@@ -41,6 +58,10 @@ body .home{
   display: flex;
   background: url("https://cdn.glitch.global/65bd84b8-6829-4701-9157-6be80ce8c23b/1657858.jpg?v=1650512863754") no-repeat center;
   background-size: cover;
+  margin: -8px;
+  height: 103vh;
+  color: #FCF5E5;
+  min-height: 500px; 
 }
 /*.information{
     width: 1000px;
