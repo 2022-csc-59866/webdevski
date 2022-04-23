@@ -20,7 +20,7 @@ html {
 /*--NAVIGATION MENU--*/
 .navbar{
     width: 100%;
-    height: 19%;
+    height: 17%;
     position: fixed;
     padding: 0;
     margin: 0;
@@ -30,7 +30,7 @@ html {
 }
 
 .navbar.sticky {
-  padding: 5px 0;
+  padding: 5px 5px;
   left: 0;
   background: #242323bd;
 }
@@ -46,13 +46,14 @@ html {
     height: 140px;
 }
 .navbar .logo img{
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
 }
 
 .navbar .nav-links{
     flex: 1;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Ubuntu','Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 17px;
     text-align: right;
 }
 .navbar .nav-links ul li{
@@ -158,14 +159,16 @@ html {
   color: #232d39;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 30px;
 }
 .featured h2 span{
   color: #f3713d;
 }
 .featured img{
-  margin: 20px auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;;
 }
 /*.information{
     width: 1000px;
