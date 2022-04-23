@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section{
+  padding: 100px 0;
+}
+
 .max-width{
   max-width: 1300px;
   padding: 0 80px;
@@ -10,7 +14,6 @@ html {
 
 .section-heading{
   text-align: center;
-  margin-top: 100px;
   margin-bottom: 80px;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -177,7 +180,7 @@ html {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .featured .featured-content{
     display: flex;
