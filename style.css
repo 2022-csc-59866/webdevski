@@ -3,7 +3,7 @@ html {
 }
 
 .max-width{
-  max-width: screen;
+  max-width: 1300px;
   padding: 0 80px;
   margin: auto;
 }
@@ -32,7 +32,7 @@ html {
 .navbar.sticky {
   padding: 20px 0;
   left: 0;
-  background: #47474d;
+  background: #ffffffb6;
 }
 
 .navbar .max-width {
@@ -45,8 +45,8 @@ html {
     flex-basis: 20%;
 }
 .navbar .logo img{
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
 }
 
 .navbar .nav-links{
