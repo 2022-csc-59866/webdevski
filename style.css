@@ -12,7 +12,7 @@ section{
   margin: auto;
 }
 
-.section-heading{
+.section-heading, .fgigs-section-heading{
   text-align: center;
   margin-bottom: 80px;
   font-family: 'Ubuntu', sans-serif;
@@ -164,8 +164,8 @@ section{
   background: #f3713d;
 }
 
-/*--Our services or sm Shit Part--*/
-.featured h2{
+
+.featured h2, .fgigs h2{
   font-size: 28px;
   font-weight: 700;
   color: #232d39;
@@ -173,10 +173,10 @@ section{
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-.featured h2 span{
+.featured h2 span, .fgigs h2 span{
   color: #f3713d;
 }
-.featured img{
+.featured img, .fgigs img{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -219,6 +219,10 @@ section{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+
+.fgigs{
+  background: url("https://cdn.glitch.global/65bd84b8-6829-4701-9157-6be80ce8c23b/preview.webp?v=1650687153859");
 }
 /*.information{
     width: 1000px;
