@@ -12,7 +12,7 @@ section{
   margin: auto;
 }
 
-.section-heading, .fgigs-section-heading{
+.section-heading, .fgigs-section-heading, .contact-section-heading{
   text-align: center;
   margin-bottom: 80px;
   font-family: 'Ubuntu', sans-serif;
@@ -165,7 +165,7 @@ section{
 }
 
 
-.featured h2{
+.featured h2, .contact h2{
   font-size: 28px;
   font-weight: 700;
   color: #232d39;
@@ -173,10 +173,10 @@ section{
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-.featured h2 span, .fgigs h2 span{
+.featured h2 span, .fgigs h2 span, .contact h2 span{
   color: #f3713d;
 }
-.featured img, .fgigs img{
+.featured img, .fgigs img, .contact img{
   display: block;
   margin-left: auto;
   margin-right: auto;

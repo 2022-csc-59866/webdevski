@@ -32,8 +32,6 @@ $(document).ready(function(){
     });
 });
 
-// owl carousel script
-
 
 //first typing animation
 /*var typed = new Typed(".typing", {
