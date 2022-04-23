@@ -162,7 +162,6 @@ html {
 }
 
 /*--Our services or sm Shit Part--*/
-
 .featured h2{
   font-size: 28px;
   font-weight: 700;
@@ -179,6 +178,44 @@ html {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+}
+.featured .featured-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Ubuntu", sans-serif;
+}
+.featured .featured-content .card{
+    width: calc(33% - 20px);
+    background: #48494bbd;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.featured .featured-content .card:hover{
+    background: #f3713d;
+}
+.featured .featured-content .card .box{
+    transition: all 0.3s ease;
+}
+.featured .featured-content .card:hover .box{
+    transform: scale(1.05);
+}
+.featured .featured-content .card i{
+    font-size: 50px;
+    color: #f3713d;
+    transition: color 0.3s ease;
+}
+.featured .featured-content .card:hover i{
+    color: #fff;
+}
+.featured .featured-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
 }
 /*.information{
     width: 1000px;
