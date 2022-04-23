@@ -74,7 +74,11 @@ html {
 .navbar.sticky .nav-links ul li a:hover{
     color: #FCF5E5;
 }
+
+
 /*--HOME SCREEN--*/
+
+/*-- First part--*/
 .home{
   display: flex;
   background: url("https://cdn.glitch.global/65bd84b8-6829-4701-9157-6be80ce8c23b/Website-Design-Background.png?v=1650596604214") no-repeat center;
@@ -149,6 +153,8 @@ html {
   color:#FCF5E5;
   background: #f3713d;
 }
+
+/*--Featured Shit Part--*/
 .featured .max-width{
   
 }
@@ -160,7 +166,7 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .featured h2 span{
   color: #f3713d;
