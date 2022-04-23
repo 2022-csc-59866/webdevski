@@ -233,12 +233,8 @@ section{
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-.fgigs p{
-  color: #FCF5E5;
-  font-weight: 400px;
-}
 .fgigs .carousel .card{
-    background: #222;
+    background: #48494bbd;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -246,7 +242,7 @@ section{
     transition: all 0.3s ease;
 }
 .fgigs .carousel .card:hover{
-    background: crimson;
+    background: #f37f51;
 }
 .fgigs .carousel .card .box{
     display: flex;
@@ -268,7 +264,7 @@ section{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid #f37f51;
     transition: all 0.3s ease;
 }
 .fgigs .carousel .card:hover img{
@@ -284,7 +280,7 @@ section{
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid crimson!important;
+    border: 2px solid #f37f51!important;
     transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -293,7 +289,7 @@ section{
 }
 .owl-dot.active,
 .owl-dot:hover{
-    background: crimson!important;
+    background: #f37f51!important;
 }
 
 /*.information{

@@ -6,11 +6,10 @@ $(document).ready(function(){
         else{
             $('.navbar').removeClass("sticky");
         }
-    })
-});
-
-// owl carousel script
-$('.carousel').owlCarousel({
+    })  
+    
+    // owl carousel script
+    $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
         autoplay: true,
@@ -32,6 +31,9 @@ $('.carousel').owlCarousel({
         }
     });
 });
+
+// owl carousel script
+
 
 //first typing animation
 /*var typed = new Typed(".typing", {
