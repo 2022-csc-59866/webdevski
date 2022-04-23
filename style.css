@@ -8,9 +8,11 @@ html {
   margin: auto;
 }
 
-p{
-  position: center;
+.section-heading{
   text-align: center;
+  margin-top: 140px;
+  margin-bottom: 80px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 /*----GOOGLE FONT IMPORT----*/
@@ -159,17 +161,16 @@ p{
   background: #f3713d;
 }
 
-/*--Featured Shit Part--*/
+/*--Our services or sm Shit Part--*/
 .featured .max-width{
   
 }
 .featured h2{
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
   color: #232d39;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 100px;
+  letter-spacing: 1px;
   margin-bottom: 20px;
 }
 .featured h2 span{
@@ -178,7 +179,8 @@ p{
 .featured img{
   display: block;
   margin-left: auto;
-  margin-right: auto;;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
 /*.information{
     width: 1000px;
