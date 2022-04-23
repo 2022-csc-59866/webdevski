@@ -234,7 +234,7 @@ section{
   margin-bottom: 20px;
 }
 .fgigs .carousel .card{
-    background: #48494bbd;
+    background: #070707;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -258,6 +258,10 @@ section{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+    color: #FCF5E5;
+}
+.fgigs .carousel .card .box p{
+  color: #FCF5E5
 }
 .fgigs .carousel .card img{
     height: 150px;
@@ -290,6 +294,13 @@ section{
 .owl-dot.active,
 .owl-dot:hover{
     background: #f37f51!important;
+}
+
+footer{
+  background: #111;
+  padding: 20px 23px;
+  color: #FCF5E5;
+  text-align: center;
 }
 
 /*.information{
