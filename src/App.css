@@ -349,3 +349,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: rotate(360deg);
   }
 }
+
+.jobs-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.Card {
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(153, 153, 153, 0.497);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  margin-bottom: 25px;
+  width: 400px;
+  text-align: center;
+}
