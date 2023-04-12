@@ -5,7 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen'
 
-export const SplashHome = () => {
+const SplashHome = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
@@ -76,3 +76,5 @@ export const SplashHome = () => {
 
     )
 }
+
+export default SplashHome;
