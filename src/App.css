@@ -350,15 +350,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-.jobs-container {
+.job-feed{
   margin-top: 0;
   padding: 180px 0 100px 0;
+  background-color: #414141;
+  height: 100%;
+}
+.jobs-container {
+  /* margin-top: 0; */
+  /* padding: 180px 0 100px 0; */
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  background-color: #414141;
-  height: 100%;
+  /* background-color: #414141; */
+  /* height: 100%; */
 }
 .Card {
   backdrop-filter: blur(2px);

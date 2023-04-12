@@ -9,15 +9,6 @@ root.render(
    <React.StrictMode>
      <App />
    </React.StrictMode>
-
-/*   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index={true} path="/" element={<SplashHome />} />
-        <Route index={false} path="/job-feed" element={<JobFeed />} />
-      </Route>
-    </Routes>
-  </BrowserRouter> */
 );
 
 // If you want to start measuring performance in your app, pass a function
