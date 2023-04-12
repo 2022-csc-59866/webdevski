@@ -1,15 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Outlet } from 'react-router-dom';
+//import { Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import JobFeed from './components/JobFeed';
+import HomeWrapper from './HomeWrapper';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Outlet />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomeWrapper/>} />
+          <Route path="/job-feed" element={<JobFeed/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
