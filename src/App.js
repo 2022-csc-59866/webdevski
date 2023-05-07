@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeWrapper from './HomeWrapper';
 import JobPage from './JobPage';
+import StackDevski from './components/StackDevski';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeWrapper/>} />
           <Route path="/job-feed" element={<JobPage/>} />
+          <Route path="/stackDevski" element={<StackDevski/>} />
         </Routes>
       </div>
     </Router>
