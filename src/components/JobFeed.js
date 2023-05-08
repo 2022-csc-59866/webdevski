@@ -91,13 +91,14 @@ const JobFeed = () => {
         //         return <JobFeedCard key={job.MatchedObjectId} job={job}/>
         //     })}
         // </Container>
-        <Container className="my-5">
-            <JobFeedSearchBar params={params} onParamChange={handleParamChange} />
-            {jobListings.map(job => {
-                return <JobFeedCard key={job.id} job={job} />
-            })}
-
-        </Container>
+        <section class="job-feed">
+            <Container className="my-5">
+                <JobFeedSearchBar params={params} onParamChange={handleParamChange} />
+                {jobListings.map(job => {
+                    return <JobFeedCard key={job.id} job={job} />
+                })}
+            </Container>
+        </section>
     )
 }
 

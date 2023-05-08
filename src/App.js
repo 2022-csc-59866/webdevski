@@ -13,8 +13,8 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route path="/" element={<HomeWrapper/>} />
-          <Route path="/job-feed" element={<JobPage/>} />
+          <Route path="/" element={<SplashHome/>} />
+          <Route path="/job-feed" element={<JobFeed/>} />
           <Route path="/stackDevski" element={<StackDevski/>} />
         </Routes>
       </div>

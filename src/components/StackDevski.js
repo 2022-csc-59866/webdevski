@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import axios from "axios"
-import {Table} from "react-bootstrap"
+import {Container, Table} from "react-bootstrap"
 import { Button, Modal, Card } from "react-bootstrap";
 
 const StackDevski = () => {
@@ -35,43 +35,47 @@ const StackDevski = () => {
     };
 
     return(
-        <div>
-            {questions.map((question) =>(
-                <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>{question.title}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-none">Question ID: {question.question_id}</Card.Subtitle>
-                        <Card.Text>
-                            {question.body}
-                        </Card.Text>
-                        <Card.Link href={question.link}>View on Stack Overflow</Card.Link>
-                        <Button onClick={() => fetchAnswers(question.question_id)}>View Answers</Button>
-                        {question.answers && (
-                            <ul>
-                            {question.answers.map((answer) => (
-                                <li key={answer.answer_id}>{answer.body}</li>
-                            ))}
-                            </ul>
-                        )}
-                    </Card.Body>
-                </Card>
-            ))}
-            <Modal show={showModal} onHide={handleCloseModal}>
-                <Modal.Header closeButton>
-                <Modal.Title>Answers</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                {answers.map((answer, index) => (
-                    <p key={index} style={{color: 'blue'}}>{answer}</p>
+        <section className="stack-devski">
+            <Container className="my-5">
+                {questions.map((question) =>(
+                    <Card className="mb-3">
+                        <Card.Body>
+                            <Card.Title>{question.title}</Card.Title>
+                            <Card.Subtitle className="mb-2 text-none">Question ID: {question.question_id}</Card.Subtitle>
+                            <Card.Text>
+                                {question.body}
+                            </Card.Text>
+                            <div>
+                                <Card.Link href={question.link}>View on Stack Overflow</Card.Link>
+                            </div>
+                            <Button onClick={() => fetchAnswers(question.question_id)}>View Answers</Button>
+                            {question.answers && (
+                                <ul>
+                                {question.answers.map((answer) => (
+                                    <li key={answer.answer_id}>{answer.body}</li>
+                                ))}
+                                </ul>
+                            )}
+                        </Card.Body>
+                    </Card>
                 ))}
-                </Modal.Body>
-                <Modal.Footer>
-                <Button variant="secondary" onClick={handleCloseModal}>
-                    Close
-                </Button>
-                </Modal.Footer>
-            </Modal>
-        </div>
+                <Modal show={showModal} onHide={handleCloseModal}>
+                    <Modal.Header closeButton>
+                    <Modal.Title>Answers</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                    {answers.map((answer, index) => (
+                        <p key={index} style={{color: 'blue'}} dangerouslySetInnerHTML={{__html: answer}}></p>
+                    ))}
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseModal}>
+                        Close
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
+            </Container>
+        </section>
     );
 }
 

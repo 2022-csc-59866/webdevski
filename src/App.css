@@ -350,6 +350,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+/* Job Page Css */
+
+.my-5.container{
+  margin-top: 10rem!important;
+}
+
+.form-control{
+  margin-bottom: 3rem;
+}
+
+.job-feed{
+  margin-top: 0;
+  padding: 5px;
+  background-image: url('./assets/images/job_feed_2.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.stack-devski{
+  margin-top: 0;
+  padding: 5px;
+  background-image: url('./assets/images/forum_cover.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.mb-3{
+  color: black;
+}
+
+.card-body div a{
+  color: orange;
+}
+
+.card-body button{
+  background-color: orange;
+  border-color: #121212;
+  color:#121212;
+}
+
+.card-body button:hover{
+  background-color: rgba(253, 194, 85, 0.863);
+  border-color: rgba(253, 194, 85, 0.863);
+}
 /* .job-feed{
   margin-top: 0;
   padding: 180px 0 100px 0;
@@ -373,3 +421,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 400px;
   text-align: center;
 } */
+
