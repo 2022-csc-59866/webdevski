@@ -34,7 +34,7 @@ const jobListings = [
         'title': 'Web Developer, Web Experience',
         'company': 'Figma',
         'createdAt': '05/05/2023',
-        'type': 'Full-Time',
+        'type': 'Part-Time',
         'location': 'New York, NY (Remote)',
         'applyUrl': 'https://boards.greenhouse.io/figma/jobs/4608928004?gh_src=28109e334us&source=LinkedIn',
         'description': "Figma is a rapidly growing company that aims to make design accessible to everyone. They provide a platform that helps product teams collaborate and create better designs together. They are currently seeking a senior web developer to join their Growth Marketing team, where the focus is on creating beautifully designed user experiences to help prospective, new, and avid users of Figma. The ideal candidate will have experience with front-end development, optimization, and infrastructure, as well as React.js, static site generators, and headless CMS tools. They should be proactive, collaborative, and user-focused, and have excellent communication skills. The role is full-time and can be held remotely or from one of Figma's US hubs. The salary range for this role is between $119,000 and $253,000 USD annually. Figma offers a competitive package of benefits and is committed to providing reasonable accommodations for individuals with disabilities."
@@ -84,7 +84,7 @@ const jobListings = [
         'title': 'UX/UI Leader',
         'company': 'BairesDev',
         'createdAt': '04/04/2023',
-        'type': 'Full-Time',
+        'type': 'Volunteer',
         'location': 'United States (Remote)',
         'applyUrl': 'https://applicants.bairesdev.com/job/66/114669/apply?utm_source=websitebairesdev&utm_medium=erp&utm_campaign=jobssite&lang=en',
         'description': 'BairesDev is a fast-growing company in America that hires top talents to work on exciting projects with world-class clients. They are looking for a UX/UI Leader to join their development team and work on projects with multicultural teams from all over the world. The ideal candidate should be proactive, a team player, and have a passion for programming to provide the best user experience. The UX/UI leader will work collaboratively with one or more scrum teams, design high-quality UI, and optimize software workflows. The company offers 100% remote work, flexible hours, paid parental leave, vacation and holidays, and an excellent compensation package. BairesDev provides an innovative environment with the structure and resources of a leading multinational, and they ensure that every team member gets the best growth and professional development opportunities.'
