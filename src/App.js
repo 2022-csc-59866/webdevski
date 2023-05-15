@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import JobFeed from './components/JobFeed';
-import SplashHome from './components/SplashHome';
+import JobFeed from './pages/JobFeed';
+import SplashHome from './pages/SplashHome';
 import NavBar from './components/NavBar';
-import StackDevski from './components/StackDevski';
+import StackDevski from './pages/StackDevski';
 
 function App() {
   return (

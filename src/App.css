@@ -24,6 +24,8 @@
   src: url('./assets/fonts/SpecialElite-Regular.woff2') format('woff2');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -41,7 +43,7 @@ body{
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: "Super Elite", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -370,14 +372,159 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
 }
 
+.jobfeed-header-container{
+  padding: 15px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  background-color: #f0a9192b;
+  box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+  backdrop-filter: blur(7px);
+  font-variant: small-caps;
+  font-weight:600;
+}
+
+.jobfeed-main-content{
+  margin-top: 30px;
+}
+
+.job-feed .form-check{
+  display:flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.job-feed .row .col-md-4 {
+  width:39.333333%;
+}
+
+.job-feed .row > .col-md-4:nth-child(3){
+  width:20%;
+}
+
 .stack-devski{
-  margin-top: 0;
-  padding: 5px;
+  /* margin-top: 0; */
+  padding: 20px;
   background-image: url('./assets/images/forum_cover.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.job-feed .my-5.container, .stack-devski .my-5.container{
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #6c757d2b;
+  box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+  backdrop-filter: blur(7px);
+  padding-bottom: 50px;
+}
+
+.stack-devski .form-control{
+  width: 80%;
+  margin: 0;
+}
+
+.stack-devski .form-div{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.stack-devski .my-5.container img{
+  display: block; 
+  margin: 0 auto; 
+  width: 70%; 
+  opacity: 0.75;
+  margin-bottom: 2rem;
+}
+
+.stackdevski-main-content{
+  border-radius: 20px;
+  background-color: #6c757d2b;
+  box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  padding: 5px 20px 39px;
+}
+
+.stackdevski-main-content .row.row-cols-1.row-cols-md-3.g-4{
+  margin-top: 1rem;
+}
+
+.stackdevski-main-content .h-100.card{
+  color: #2c2b2b;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+/* .stack-devski .my-5.container .stackdevski-card-container{
+  display: none;
+} */
+
+.stack-devski .mb-3.nav{
+  margin-top: 2rem;
+  background-color:rgb(1 0 0 / 78%);
+  opacity: 0.75;
+  border-bottom: transparent;
+  margin-bottom: 0!important;
+}
+
+.stack-devski .mb-3.nav .nav-link{
+  color:rgba(253, 194, 85, 0.863);
+}
+
+.stack-devski .mb-3.nav .nav-link.active{
+  background-color:rgba(210, 210, 210, 0.78);
+  color: black;
+  opacity: 0.75;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+.stack-devski .mb-3.nav .nav-link:hover, .stack-devski .mb-3.nav .nav-link:focus{
+  background-color:rgba(210, 210, 210, 0.78);
+  border-color: rgba(210, 210, 210, 0.78);
+  color: black;
+  opacity: 0.75;
+}
+
+.tab-content{
+  background-color: rgb(251 251 251 / 35%);
+  box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  padding: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.alert-warning{
+  --bs-alert-color: #0f0f0e;
+  --bs-alert-bg: #de9f5aab;
+  --bs-alert-border-color: #ffecb5;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-variant: petite-caps;
+  font-size: 22px;
+}
+
+.stackdevski-home-icon{
+  font-size: 55px;
+  margin-bottom: 16px;
+}
+
+.stackdevski-faq-modal.modal, .stackdevski-search-modal.modal{
+  z-index: 9999;
+  color:#282c34;
+  --bs-modal-width: 1092px;
 }
 
 .mb-3{
