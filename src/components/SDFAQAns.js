@@ -24,15 +24,13 @@ const SDFAQAns = ({questions}) => {
     return(
         <>
             {questions.map((question) => (
-                <Carousel.Item key={question.question_id}>
-                    <Card>
+                    <Card key={question.question_id}>
                         <Card.Body>
                             <Card.Title>{question.title}</Card.Title>
                             <Card.Text>{question.body}</Card.Text>
                             <Button variant="primary"  onClick={() => fetchAnswers(question.question_id)}>View Answers</Button>
                         </Card.Body>
                     </Card>
-                </Carousel.Item> 
             ))}
         <Modal show={showModal} onHide={handleCloseModal} className="stackdevski-faq-modal">
             <Modal.Header closeButton>
