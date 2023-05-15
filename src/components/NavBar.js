@@ -64,7 +64,9 @@ const NavBar = () => {
                         <a href="#"><FontAwesomeIcon className="ficon" icon={faInstagram}></FontAwesomeIcon></a>
                         <a href="#"><FontAwesomeIcon className="ficon" icon={faDiscord}></FontAwesomeIcon></a>
                     </div>
-                    <button className="vvd" onClick={() => console.log('connect')}><span>Sign In</span></button>
+                    <Link to="/login">
+                        <button className="vvd" onClick={() => console.log('connect')}><span>Sign In</span></button>
+                    </Link>
                 </span>
                 </Navbar.Collapse>
             </Container>

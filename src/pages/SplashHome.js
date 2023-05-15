@@ -2,8 +2,9 @@ import { useState, useEffect} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import headerImg from "../assets/images/coder.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 import 'animate.css';
-import TrackVisibility from 'react-on-screen'
+import TrackVisibility from 'react-on-screen';
 
 const SplashHome = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -58,7 +59,9 @@ const SplashHome = () => {
                         <span className="tagline">Welcome to WEBDEVSKI</span>
                         <h1>{`Are you a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer?", "Web Designer?", "UI/UX Designer?" ]'><span className="wrap">{text}</span></span></h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <button onClick={() => console.log('connect')}>Sign Up<ArrowRightCircle size={25} /></button>
+                        <Link to="/register">
+                            <button>Sign Up<ArrowRightCircle size={25} /></button>
+                        </Link>
                     </div>}
                     </TrackVisibility>
                 </Col>

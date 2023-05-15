@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { ToastContainer, toast } from "react-toastify";
+import { Container, Form, Button } from 'react-bootstrap';
 
 function Login() {
   const [cookies] = useCookies([]);
@@ -42,38 +43,42 @@ function Login() {
     }
   };
   return (
-    <div className="container">
-      <h2>Login to your Account</h2>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            onChange={(e) =>
-              setValues({ ...values, [e.target.name]: e.target.value })
-            }
-          />
+    <section className="login-page">
+      <Container className="my-5">
+        <div className="login-page-content">
+          <h2>Login to your Account</h2>
+          <Form onSubmit={(e) => handleSubmit(e)}>
+            <Form.Group>
+              <Form.Label htmlFor="email">Email</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={(e) =>
+                  setValues({ ...values, [e.target.name]: e.target.value })
+                }
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label htmlFor="password">Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                name="password"
+                onChange={(e) =>
+                  setValues({ ...values, [e.target.name]: e.target.value })
+                }
+              />
+            </Form.Group>
+            <Button type="submit">Submit</Button>
+            <span>
+              Don't have an account ?<Link to="/register"> Register </Link>
+            </span>
+          </Form>
+          <ToastContainer />
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={(e) =>
-              setValues({ ...values, [e.target.name]: e.target.value })
-            }
-          />
-        </div>
-        <button type="submit">Submit</button>
-        <span>
-          Don't have an account ?<Link to="/register"> Register </Link>
-        </span>
-      </form>
-      <ToastContainer />
-    </div>
+      </Container>
+    </section>
   );
 }
 
