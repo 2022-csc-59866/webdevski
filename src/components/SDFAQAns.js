@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import axios from "axios";
-import { Card, Button, Carousel, Modal} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Modal} from 'react-bootstrap';
 
 const SDFAQAns = ({questions}) => {
     const [showModal, setShowModal] = useState(false);
@@ -8,7 +8,7 @@ const SDFAQAns = ({questions}) => {
 
     const fetchAnswers = async(questionId) => {
         const response = await axios.get(
-            `https://api.stackexchange.com/2.3/questions/${questionId}/answers?order=desc&sort=activity&site=stackoverflow&filter=!nOedRLqQ19`
+            `https://api.stackexchange.com/2.3/questions/${questionId}/answers?pagesize=10&order=desc&sort=activity&site=stackoverflow&filter=!nOedRLqQ19`
         );
         const answers = response.data.items.map((item) => item.body);
         console.log(response.data);
@@ -23,15 +23,23 @@ const SDFAQAns = ({questions}) => {
 
     return(
         <>
-            {questions.map((question) => (
-                    <Card key={question.question_id}>
-                        <Card.Body>
-                            <Card.Title>{question.title}</Card.Title>
-                            <Card.Text>{question.body}</Card.Text>
-                            <Button variant="primary"  onClick={() => fetchAnswers(question.question_id)}>View Answers</Button>
-                        </Card.Body>
-                    </Card>
-            ))}
+        <Container>
+            <Row xs={2} md={5}>
+                {questions.map((question) => (
+                    <Col key={question.question_id}>
+                        <Card className='h-100'>
+                            <Card.Body>
+                                <Card.Title>{question.title}</Card.Title>
+                                
+                                <Card.Text dangerouslySetInnerHTML={{ __html: question.body }}></Card.Text>
+                                <Button variant="primary"  onClick={() => fetchAnswers(question.question_id)}>View Answers</Button>
+                                
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
+        </Container>
         <Modal show={showModal} onHide={handleCloseModal} className="stackdevski-faq-modal">
             <Modal.Header closeButton>
             <Modal.Title>Answers</Modal.Title>
