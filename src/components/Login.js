@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { supabase } from "../server/client.js"
+import { Container } from 'react-bootstrap'
 import {
   Auth,
 } from '@supabase/auth-ui-react'
@@ -11,13 +12,19 @@ import {
 
 function Login() {
   return (
-    <div>
-      <Auth
-        supabaseClient={supabase}
-        appearance={{ theme: ThemeSupa }}
+    <section>
+      <Container className="my-5">
+        <div className='jobfeed-createpost-page-content'>
+          <div>
+            <Auth
+              supabaseClient={supabase}
+              appearance={{ theme: ThemeSupa }}
 
-      />
-    </div>
+            />
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }
 export default Login;

@@ -26,7 +26,7 @@ const JobFeed = () => {
             const { data, error } = await supabase
                 .from('Jobs')
                 .select('id, title, company, createdAt, type, location, applyUrl, description')
-                .order('created_at', { ascending: true });
+                .order('created_at', { ascending: false });
 
             if (error) {
                 console.error(error);

@@ -18,12 +18,13 @@ const JobFeedCreatePost = () => {
         const { error } = await supabase
             .from('Jobs')
             .insert({ title: post.title, company: post.company, createdAt: post.createdAt, type: post.type, location: post.location, applyUrl: post.applyUrl, description: post.description })
-            // .select();
 
         if (error) {
             console.log(error);
         }
+        window.location = "/job-feed";
     }
+
 
     return (
         <section>
