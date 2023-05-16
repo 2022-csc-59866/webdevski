@@ -10,6 +10,7 @@ import StackDevski from './pages/StackDevski';
 import Register from './pages/Register'
 import { supabase } from "./server/client.js"
 import Login from './components/Login';
+import Success from './components/Success';
 
 import JobFeedCreatePost from './pages/JobFeedCreatePost'
 
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SplashHome/>} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register/>} />
+          <Route path="/success" element={<Success/>}/>
           <Route path="/job-feed" element={<JobFeed/>} />
           <Route path="/new" element={<JobFeedCreatePost/>} />
           <Route path="/stackDevski" element={<StackDevski/>} />
