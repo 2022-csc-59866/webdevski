@@ -18,9 +18,6 @@ function Login() {
     if(event === "SIGNED_IN"){
       navigate("/stackDevski");
     }
-    else if(event === "SIGNED_OUT"){
-      navigate("/login");
-    }
   })
 
   return (

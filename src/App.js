@@ -12,6 +12,7 @@ import { supabase } from "./server/client.js"
 import Login from './components/Login';
 import Success from './components/Success';
 
+import JobFeedCreatePost from './pages/JobFeedCreatePost'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/success" element={<Success/>}/>
           <Route path="/job-feed" element={<JobFeed/>} />
+          <Route path="/new" element={<JobFeedCreatePost/>} />
           <Route path="/stackDevski" element={<StackDevski/>} />
         </Routes>
       </div>

@@ -1,8 +1,22 @@
 import { useState } from "react";
 import { Card, Badge, Button, Collapse } from "react-bootstrap";
+import { supabase } from '../server/client';
 
 const JobFeedCard = ({ job }) => {
     const [open, setOpen] = useState(false);
+
+    const deletePost = async (event) => {
+        event.preventDefault();
+
+        await supabase
+        .from('Jobs')
+        .delete()
+        .eq('id', job.id);
+
+        window.location = "/job-feed";
+
+    }
+
     return (
         // <Card className="mb-3">
         //     <Card.Body>
@@ -39,6 +53,7 @@ const JobFeedCard = ({ job }) => {
                 {/* d-flex */}
                 <div className=" justify-content-between">
                     <div>
+                        <button onClick={deletePost}>Delete Post</button>
                         <Card.Title>
                             {job.title} - <span className="text-muted font-weight-light">{job.company}</span>
                         </Card.Title>
