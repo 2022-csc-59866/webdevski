@@ -11,6 +11,17 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
+
+  const navigate = useNavigate();
+
+  supabase.auth.onAuthStateChange(async (event) =>{
+    if(event !== "SIGNED_OUT"){
+      navigate("/stackDevski");
+    }else{
+      navigate("/");
+    }
+  })
+
   return (
     
     <section className="login-page">
