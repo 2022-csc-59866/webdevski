@@ -1,13 +1,16 @@
+import { supabase } from '../server/client'
 import JobFeedCard from '../components/JobFeedCard';
 import { Container } from 'react-bootstrap';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSearchengin} from '@fortawesome/free-brands-svg-icons'
-import jobListings from '../jobListings';
+// import jobListings from '../jobListings';
 import JobFeedSearchBar from '../components/JobFeedSearchBar';
 
 const JobFeed = () => {
     const [params, setParams] = useState({description: '', location: '', type: false})
+    const [jobs, setJobs] = useState([]);
 
     const handleParamChange = e => {
         const param = e.target.name;
@@ -17,7 +20,25 @@ const JobFeed = () => {
         })
     }
 
-    const filteredJobs = jobListings.filter(job =>
+    useEffect(() => {
+        const fetchJobs = async () => {
+
+            const { data, error } = await supabase
+                .from('Jobs')
+                .select('id, title, company, createdAt, type, location, applyUrl, description')
+                .order('created_at', { ascending: true });
+
+            if (error) {
+                console.error(error);
+            } else {
+                setJobs(data);
+            }
+        };
+
+        fetchJobs();
+    }, []);
+
+    const filteredJobs = jobs.filter(job =>
         job.description.toLowerCase().includes(params.description.toLowerCase()) &&
         job.location.toLowerCase().includes(params.location.toLowerCase()) &&
         (!params.type || job.type.toLowerCase().includes('full-time'))
@@ -31,6 +52,7 @@ const JobFeed = () => {
                         <FontAwesomeIcon icon={faSearchengin} />
                     </h2>
                 </div>
+                <Link to="/new"><button> Create New Job Postki </button></Link>
                 <div className='jobfeed-main-content'>
                     <JobFeedSearchBar params={params} onParamChange={handleParamChange} />
                     {filteredJobs.length > 0 ?

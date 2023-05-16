@@ -8,6 +8,7 @@ import NavBar from './components/NavBar';
 import StackDevski from './pages/StackDevski';
 import Login from './pages/Login'
 import Register from './pages/Register'
+import JobFeedCreatePost from './pages/JobFeedCreatePost'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
           <Route path="/job-feed" element={<JobFeed/>} />
+          <Route path="/new" element={<JobFeedCreatePost/>} />
           <Route path="/stackDevski" element={<StackDevski/>} />
         </Routes>
       </div>
