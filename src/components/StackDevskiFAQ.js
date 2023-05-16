@@ -11,7 +11,7 @@ const StackDevskiFAQ = () => {
     useEffect(() => {
         const fetchData = async() => {
             const response = await axios.get(
-                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=web&site=stackoverflow&filter=!nOedRLr0Wi`
+                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=web&site=stackoverflow&filter=!6Wfm_gSvlYUX9`
             );
             setQuestions(response.data.items);
         };
@@ -22,7 +22,7 @@ const StackDevskiFAQ = () => {
     useEffect(() => {
         const fetchCRData = async() => {
             const response = await axios.get(
-                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=javascript&site=codereview&filter=!nOedRLr0Wi`
+                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=javascript&site=codereview&filter=!6Wfm_gSvlYUX9`
             );
             setQuestionsCR(response.data.items);
         };
@@ -33,7 +33,7 @@ const StackDevskiFAQ = () => {
     useEffect(() => {
         const fetchWMData = async() => {
             const response = await axios.get(
-                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=javascript&site=webmasters&filter=!nOedRLr0Wi`
+                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=javascript&site=webmasters&filter=!6Wfm_gSvlYUX9`
             );
             setQuestionsWM(response.data.items);
         };

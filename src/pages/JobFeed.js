@@ -52,7 +52,7 @@ const JobFeed = () => {
                         <FontAwesomeIcon icon={faSearchengin} />
                     </h2>
                 </div>
-                <Link to="/new"><button> Create New Job Postki </button></Link>
+                <Link to="/new-job-post"><button> Create New Job Postki </button></Link>
                 <div className='jobfeed-main-content'>
                     <JobFeedSearchBar params={params} onParamChange={handleParamChange} />
                     {filteredJobs.length > 0 ?

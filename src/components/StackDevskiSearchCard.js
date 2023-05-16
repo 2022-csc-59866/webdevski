@@ -27,11 +27,11 @@ const StackDevskiSearchCard = ({searchResults}) => {
                     <Card className="h-100">
                         <Card.Body>
                             <Card.Title>{result.title}</Card.Title>
+                            <Card.Subtitle>{result.is_answered ? "Question has Answer" : "Not Answered"}</Card.Subtitle>
+                            <Card.Subtitle>Answer Count: {result.answer_count}</Card.Subtitle>
                             {/* <Card.Text>{result.body}</Card.Text> */}
-                            <Card.Text>{result.is_answered ? "Question has Answer" : "Not Answered"}</Card.Text>
-                            <Card.Text>Answer Count: {result.answer_count}</Card.Text>
                             <Button variant="primary" onClick={() => handleShowModal(result)}>
-                                View Answers
+                                View
                             </Button>
                         </Card.Body>
                     </Card>
@@ -40,10 +40,15 @@ const StackDevskiSearchCard = ({searchResults}) => {
             )}
             {selectedResult && (
                 <Modal show={showModal} onHide={handleCloseModal} className="stackdevski-search-modal">
-                    <Modal.Header closeButton>
-                        <Modal.Title>{selectedResult.title}</Modal.Title>
+                    <Modal.Header>
+                        <Modal.Title className="overflow-auto">
+                            <button type="button" class="btn-close" aria-label="Close" onClick={() => handleCloseModal()}></button>
+                            <h3>{selectedResult.title}</h3>
+                            <br />
+                            <small dangerouslySetInnerHTML={{ __html: selectedResult.body }}></small>
+                        </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body className="overflow-auto">
                         {selectedResult.answers && selectedResult.answers.length > 0 ? (
                             selectedResult.answers.map((answer) => (
                             <>

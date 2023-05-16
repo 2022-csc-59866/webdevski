@@ -43,7 +43,7 @@ const NavBar = () => {
                     <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                     {/* <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link> */}
                     <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
-                    <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
+                    <Nav.Link as={Link} to="/contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
                     <Nav.Link as={Link} to="/job-feed" className={activeLink === 'job-feed' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('job-feed')}>Job Feed</Nav.Link>
                     <Nav.Link as={Link} to="/stackDevski" className={activeLink === 'stackDevski' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('stackDevski')}>stackDevski</Nav.Link>
 {/*                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">

@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import {Form, Button} from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 const StackDevskiSearchBar = ({setSearchResults}) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -28,7 +29,7 @@ const StackDevskiSearchBar = ({setSearchResults}) => {
                     Search
                 </Button>
             </Form.Group>
-            <Button className="col text-center" variant="tertiary" > Post Question </Button>
+            <Link to={"/new-q&a"}><Button className="col text-center" variant="tertiary" > Post Question </Button></Link>
         </Form>
     );
 }
