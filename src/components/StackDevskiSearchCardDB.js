@@ -1,8 +1,21 @@
-import { useState } from "react";
-import { Card, Button, Modal } from 'react-bootstrap';
+import { useState, useEffect } from "react";
+import { Card, Button, Collapse, Modal } from 'react-bootstrap';
 import { deleteDevskiPost } from "../models/stackDevskiQuestionPost";
+import { readDevskiPosts } from "../models/stackDevskiQuestionPost";
 
 const StackDevskiSearchCardDB = ({searchResultsDB}) => {
+    const [open, setOpen] = useState(false);
+    const [localDesvkiPosts, setLocalDevskiPosts] = useState([]);
+
+    useEffect(() => {
+        const fetchLocalPosts = async () => {
+            const data = await readDevskiPosts();
+            if (data) {
+                setLocalDevskiPosts(data);
+            }
+        };
+        fetchLocalPosts();
+    }, []);
 /*     const[showModal, setShowModal] = useState(false);
     const[selectedResult, setSelectedResult] = useState(null);
 
@@ -20,29 +33,41 @@ const StackDevskiSearchCardDB = ({searchResultsDB}) => {
         deleteDevskiPost(id);
     }
 
+    const displayPosts = searchResultsDB.length > 0 ? searchResultsDB : localDesvkiPosts;
+
     return(
         <div className="row row-cols-1 row-cols-md-3 g-4">
-            {searchResultsDB.length === 0 ? (
+            {displayPosts.length === 0 ? (
                 <div className="col text-center">
                     <p>No Results Found</p>
                 </div>
             ) : (
-                searchResultsDB.map((result) => (
+                displayPosts.map((result) => (
                 <div className="col" key={result.id}>
-                    <Button onClick={handleDeleteButton(result.id)}>Delete Post</Button>
-                    <Card className="h-100">
-                        <Card.Body>
-                            <Card.Title>{result.question_title}</Card.Title>
-{/*                             <Card.Subtitle>{result.is_answered ? "Question has Answer" : "Not Answered"}</Card.Subtitle>
+                    <Button onClick={(e) => handleDeleteButton(e, result.id)}>Delete Post</Button>
+                        <Card className="h-100">
+                            <Card.Body>
+                                <Card.Title>{result.question_title}</Card.Title>
+                                {/*                             <Card.Subtitle>{result.is_answered ? "Question has Answer" : "Not Answered"}</Card.Subtitle>
                             <Card.Subtitle>Answer Count: {result.answer_count}</Card.Subtitle>
  */}                            {/* <Card.Text>{result.body}</Card.Text> */}
-                            <Button variant="primary">
+                                {/* <Button variant="primary">
                                 View
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </div>
-            ))
+                            </Button> */}
+                                <Card.Text>
+                                    <Button onClick={() => setOpen(prevOpen => !prevOpen)} variant="primary">
+                                        {open ? 'Hide' : 'View'}
+                                    </Button>
+                                </Card.Text>
+                                <Collapse in={open}>
+                                    <div className="mt-4">
+                                        <Card.Text>{result.question_description}</Card.Text>
+                                    </div>
+                                </Collapse>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                ))
             )}
 {/*             {selectedResult && (
                 <Modal show={showModal} onHide={handleCloseModal} className="stackdevski-search-modal">
