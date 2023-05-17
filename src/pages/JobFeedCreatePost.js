@@ -1,6 +1,6 @@
-import { supabase } from '../server/client';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import { createPost } from '../models/jobFeedPost';
 
 const JobFeedCreatePost = () => {
     const [post, setPost] = useState({ title: "", company: "", createdAt: "", type: "", location: "", applyUrl: "", description: "" });
@@ -12,17 +12,9 @@ const JobFeedCreatePost = () => {
         })
     }
 
-    const createPost = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-
-        const { error } = await supabase
-            .from('Jobs')
-            .insert({ title: post.title, company: post.company, createdAt: post.createdAt, type: post.type, location: post.location, applyUrl: post.applyUrl, description: post.description })
-
-        if (error) {
-            console.log(error);
-        }
-        window.location = "/job-feed";
+        createPost(post);
     }
 
 
@@ -30,7 +22,7 @@ const JobFeedCreatePost = () => {
         <section>
             <Container className="my-5">
                 <div className="jobfeed-createpost-page-content">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label for="title">Title</label> <br />
                         <input type="text" id="title" name="title" value={post.title} onChange={handleChange} /><br />
                         <br />
@@ -59,7 +51,7 @@ const JobFeedCreatePost = () => {
                         <textarea rows="5" cols="50" id="description" name="description" value={post.description} onChange={handleChange}>
                         </textarea>
                         <br />
-                        <input type="submit" value="Submit" onClick={createPost} />
+                        <input type="submit" value="Submit"/>
                     </form>
                 </div>
             </Container>

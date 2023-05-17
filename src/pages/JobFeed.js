@@ -1,11 +1,10 @@
-import { supabase } from '../server/client'
+import { readPosts } from '../models/jobFeedPost';
 import JobFeedCard from '../components/JobFeedCard';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSearchengin} from '@fortawesome/free-brands-svg-icons'
-// import jobListings from '../jobListings';
 import JobFeedSearchBar from '../components/JobFeedSearchBar';
 
 const JobFeed = () => {
@@ -22,15 +21,9 @@ const JobFeed = () => {
 
     useEffect(() => {
         const fetchJobs = async () => {
-
-            const { data, error } = await supabase
-                .from('Jobs')
-                .select('id, title, company, createdAt, type, location, applyUrl, description')
-                .order('created_at', { ascending: false });
-
-            if (error) {
-                console.error(error);
-            } else {
+            const data = await readPosts();
+            
+            if (data) {
                 setJobs(data);
             }
         };
