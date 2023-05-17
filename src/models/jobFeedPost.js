@@ -10,7 +10,6 @@ export const readPosts = async () => {
     } else {
         return data;
     }
-
 }
 
 export const createPost = async (post) => {
