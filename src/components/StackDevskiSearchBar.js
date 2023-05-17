@@ -1,23 +1,20 @@
-import {useState, useEffect} from "react";
-import axios from "axios";
+import {useState} from "react";
 import {Form, Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
+import { searchQuestions } from "../controllers/stackOverflow";
 
 const StackDevskiSearchBar = ({setSearchResults}) => {
     const [searchTerm, setSearchTerm] = useState('');
-    
 
     const handleSearch = async(e) => {
         e.preventDefault();
         const searchTerm = e.target.formSearch.value;
-        const response = await axios.get(
-            `https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=relevance&tagged=web&q=${searchTerm}&site=stackoverflow&filter=!6Wfm_gSyiPjm9`
-        );
-        if(searchTerm.trim() === '' || !response.data.items || response.data.items.length === 0){
+        const data = await searchQuestions(searchTerm);
+        if(searchTerm.trim() === '' || !data || data.length === 0){
             setSearchResults([]);
             return;
         }
-        setSearchResults(response.data.items);   
+        setSearchResults(data); 
     }
 
     return(
