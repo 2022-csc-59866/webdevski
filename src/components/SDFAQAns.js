@@ -46,8 +46,7 @@ const SDFAQAns = ({questions}) => {
         </Container>
         <Modal show={showModal} onHide={handleCloseModal} className="stackdevski-faq-modal">
             <Modal.Header>
-                <Modal.Title>
-                    <button type="button" class="btn-close" aria-label="Close" onClick={() => handleCloseModal()}></button>
+                <Modal.Title className="overflow-auto">
                     <h3>{selectedQuestionT}</h3>
                     <br />
                     <small dangerouslySetInnerHTML={{ __html: selectedQuestionB }}></small>

@@ -42,7 +42,6 @@ const StackDevskiSearchCard = ({searchResults}) => {
                 <Modal show={showModal} onHide={handleCloseModal} className="stackdevski-search-modal">
                     <Modal.Header>
                         <Modal.Title className="overflow-auto">
-                            <button type="button" class="btn-close" aria-label="Close" onClick={() => handleCloseModal()}></button>
                             <h3>{selectedResult.title}</h3>
                             <br />
                             <small dangerouslySetInnerHTML={{ __html: selectedResult.body }}></small>
@@ -63,6 +62,11 @@ const StackDevskiSearchCard = ({searchResults}) => {
                             <Modal.Body>No Answers Found</Modal.Body>
                         )}
                     </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleCloseModal}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
                 </Modal>
             )}
         </div>
