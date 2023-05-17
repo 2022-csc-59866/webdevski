@@ -1,4 +1,3 @@
-// import React from "react";
 import { Form, Col, Row } from "react-bootstrap";
 
 const JobFeedSearchBar = ({ params, onParamChange }) => {
