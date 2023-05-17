@@ -4,18 +4,6 @@ import { deleteDevskiPost } from "../models/stackDevskiQuestionPost";
 import { readDevskiPosts } from "../models/stackDevskiQuestionPost";
 
 const StackDevskiSearchCardDB = ({searchResultsDB}) => {
-    // const [open, setOpen] = useState(false);
-    // const [localDesvkiPosts, setLocalDevskiPosts] = useState([]);
-
-    // useEffect(() => {
-    //     const fetchLocalPosts = async () => {
-    //         const data = await readDevskiPosts();
-    //         if (data) {
-    //             setLocalDevskiPosts(data);
-    //         }
-    //     };
-    //     fetchLocalPosts();
-    // }, []);
 /*     const[showModal, setShowModal] = useState(false);
     const[selectedResult, setSelectedResult] = useState(null);
 
@@ -33,7 +21,6 @@ const StackDevskiSearchCardDB = ({searchResultsDB}) => {
         deleteDevskiPost(id);
     }
 
-    // const displayPosts = searchResultsDB.length > 0 ? searchResultsDB : localDesvkiPosts;
 
     return(
         <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -54,16 +41,6 @@ const StackDevskiSearchCardDB = ({searchResultsDB}) => {
                                  <Button variant="primary">
                                 View
                             </Button> 
-                                {/* <Card.Text>
-                                    <Button onClick={() => setOpen(prevOpen => !prevOpen)} variant="primary">
-                                        {open ? 'Hide' : 'View'}
-                                    </Button>
-                                </Card.Text>
-                                <Collapse in={open}>
-                                    <div className="mt-4">
-                                        <Card.Text>{result.question_description}</Card.Text>
-                                    </div>
-                                </Collapse> */}
                             </Card.Body>
                         </Card>
                     </div>

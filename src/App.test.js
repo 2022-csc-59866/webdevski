@@ -2,17 +2,21 @@
 import { fireEvent, render, screen, waitFor, act } from '@testing-library/react'
 // Import Jest matchers.
 import '@testing-library/jest-dom'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Import the components to test.
-import { fetchAnswers, fetchQuestions, fetchQuestionsCR, fetchQuestionsWM } from './controllers/stackOverflow';
+import { fetchAnswers, fetchQuestions, fetchQuestionsCR, fetchQuestionsWM, searchQuestions } from './controllers/stackOverflow';
 import SDFAQAns from './components/SDFAQAns';
 import StackDevskiFAQ from './components/StackDevskiFAQ';
+import StackDevskiSearchBar from './components/StackDevskiSearchBar';
+import StackDevskiSearchCard from './components/StackDevskiSearchCard';
 
 jest.mock('./controllers/stackOverflow', () => ({
   fetchAnswers: jest.fn(),
   fetchQuestions: jest.fn(),
   fetchQuestionsCR: jest.fn(),
-  fetchQuestionsWM: jest.fn()
+  fetchQuestionsWM: jest.fn(),
+  searchQuestions: jest.fn()
 }));
 
 describe('StackDevskiFAQ', () => {
@@ -152,5 +156,52 @@ describe('SDFAQAns', () => {
   });
 });
 
+// describe('StackDevskiSearchBar', () => {
+//   it('searches and displays Stack Overflow questions', async () => {
+//     const mockSearchTerm = 'searchTerm';
+//     const mockResponse = {
+//       data: {
+//         items: [
+//           { question_id: 1, title: 'Question 1', body: 'Question body 1 searchTerm' },
+//           { question_id: 2, title: 'Question 2', body: 'Question body 2 searchTerm' },
+//         ],
+//       },
+//     };
+//     searchQuestions.mockResolvedValueOnce(mockResponse);
 
+//     await act(async () => {
+//       render(
+//         <Router>
+//           <StackDevskiSearchBar
+//             setSearchResults={mockResponse.data.items}
+//             setSearchResultsDB={() => {}}
+//           />
+//         </Router>
+//       );
+    
+//       const searchInput = screen.getByRole('text', { name: 'Search' });
+//       const searchButton = screen.getByText('Search');
+    
+//       fireEvent.change(searchInput, { target: { value: mockSearchTerm } });
+//       fireEvent.click(searchButton);
+    
+//       await waitFor(() => {
+//         expect(searchQuestions).toHaveBeenCalledTimes(1);
+//         expect(searchQuestions).toHaveBeenCalledWith(mockSearchTerm);
+    
+//         // Verify that the expected number of question elements are rendered
+//         const questionElements = screen.getAllByTestId('question');
+//         expect(questionElements.length).toBe(mockResponse.data.items.length);
+    
+//         // Verify the properties of each question element
+//         mockResponse.data.items.forEach((question, index) => {
+//           const questionElement = questionElements[index];
+//           expect(questionElement).toHaveTextContent(question.title);
+//         });
+//       });
+    
+//       // render(<StackDevskiSearchCard searchResults={mockResponse.data.items} />);
+//     });
+//   });
+// });
 
