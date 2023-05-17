@@ -24,9 +24,9 @@ const SDFAQAns = ({questions}) => {
         <>
         <Container>
             <Row xs={2} md={5}>
-                {questions.map((question) => (
+                {questions && questions.map((question) => (
                     <Col key={question.question_id}>
-                        <Card className='h-100 w-100'>
+                        <Card className='h-100 w-100' data-testid="question">
                             <Card.Body>
                                 <Card.Title dangerouslySetInnerHTML={{ __html: question.title }}></Card.Title>
                                 
@@ -48,7 +48,7 @@ const SDFAQAns = ({questions}) => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-            {answers.length > 0 ? (answers.map((answer) => (
+            {answers && answers.length > 0 ? (answers.map((answer) => (
                 <>
                 <div key={answer.answer_id}>
                     <h5>{answer.is_accepted ? "Accepted Answer" : "Answer"}</h5>
