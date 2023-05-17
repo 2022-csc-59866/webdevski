@@ -23,32 +23,33 @@ const JobFeedCreatePost = () => {
             <Container className="my-5">
                 <div className="jobfeed-createpost-page-content">
                     <form onSubmit={handleSubmit}>
+                        <h3>Create Job Post</h3>
                         <label for="title">Title</label> <br />
-                        <input type="text" id="title" name="title" value={post.title} onChange={handleChange} /><br />
+                        <input type="text" id="title" name="title" value={post.title} onChange={handleChange} style={{ color: 'black' }} /><br />
                         <br />
 
                         <label for="company">Company</label><br />
-                        <input type="text" id="company" name="company" value={post.company} onChange={handleChange} /><br />
+                        <input type="text" id="company" name="company" value={post.company} onChange={handleChange} style={{ color: 'black' }} /><br />
                         <br />
 
                         <label for="createdAt">Time Created (MM/DD/YYYY)</label><br />
-                        <input type="text" id="createdAt" name="createdAt" value={post.createdAt} onChange={handleChange} /><br />
+                        <input type="text" id="createdAt" name="createdAt" value={post.createdAt} onChange={handleChange} style={{ color: 'black' }} /><br />
                         <br />
 
                         <label for="type">Type (Full-Time, Part-Time, ...)</label><br />
-                        <input type="text" id="type" name="type" value={post.type} onChange={handleChange} /><br />
+                        <input type="text" id="type" name="type" value={post.type} onChange={handleChange} style={{ color: 'black' }} /><br />
                         <br />
 
                         <label for="location">Location</label><br />
-                        <input type="text" id="location" name="location" value={post.location} onChange={handleChange} /><br />
+                        <input type="text" id="location" name="location" value={post.location} onChange={handleChange} style={{ color: 'black' }} /><br />
                         <br />
 
                         <label for="applyUrl">Apply Link</label><br />
-                        <input type="text" id="applyUrl" name="applyUrl" value={post.applyUrl} onChange={handleChange} /><br />
+                        <input type="text" id="applyUrl" name="applyUrl" value={post.applyUrl} onChange={handleChange} style={{ color: 'black' }} /><br />
                         <br />
 
                         <label for="description">Description</label><br />
-                        <textarea rows="5" cols="50" id="description" name="description" value={post.description} onChange={handleChange}>
+                        <textarea rows="5" cols="50" id="description" name="description" value={post.description} onChange={handleChange} style={{ color: 'black' }}>
                         </textarea>
                         <br />
                         <input type="submit" value="Submit"/>

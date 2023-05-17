@@ -2,19 +2,27 @@ import {useState} from "react";
 import {Form, Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import { searchQuestions } from "../controllers/stackOverflow";
+import { searchDevskiQuestions } from "../models/stackDevskiQuestionPost";
 
-const StackDevskiSearchBar = ({setSearchResults}) => {
+const StackDevskiSearchBar = ({setSearchResults, setSearchResultsDB}) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearch = async(e) => {
         e.preventDefault();
         const searchTerm = e.target.formSearch.value;
-        const data = await searchQuestions(searchTerm);
-        if(searchTerm.trim() === '' || !data || data.length === 0){
+        const [stackExchangeData, supaBaseData] = await Promise.all([
+            searchQuestions(searchTerm),
+            searchDevskiQuestions(searchTerm),
+
+        ]);
+        if(searchTerm.trim() === "" || (!stackExchangeData && !supaBaseData)){
             setSearchResults([]);
+            setSearchResultsDB([]);
             return;
         }
-        setSearchResults(data); 
+
+        setSearchResults(stackExchangeData);
+        searchDevskiQuestions(supaBaseData); 
     }
 
     return(

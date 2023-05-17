@@ -58,7 +58,7 @@ const SplashHome = () => {
                     <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                         <span className="tagline">Welcome to WEBDEVSKI</span>
                         <h1>{`Are you a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer?", "Web Designer?", "UI/UX Designer?" ]'><span className="wrap">{text}</span></span></h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p style={{ color: 'white' }}>Our mission is simple: to provide a central hub where web developers of all levels can access a wealth of resources, engage in meaningful discussions, and explore the latest trends and techniques in the industry. From front-end development to back-end programming, from design principles to database management, we cover it all.</p>
                         <Link to="/register">
                             <button>Sign Up<ArrowRightCircle size={25} /></button>
                         </Link>

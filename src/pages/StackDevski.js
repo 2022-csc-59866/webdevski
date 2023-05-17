@@ -7,9 +7,11 @@ import { Container} from "react-bootstrap";
 import StackDevskiSearchBar from "../components/StackDevskiSearchBar";
 import StackDevskiSearchCard from "../components/StackDevskiSearchCard";
 import StackDevskiFAQ from "../components/StackDevskiFAQ";
+import StackDevskiSearchCardDB from "../components/StackDevskiSearchCardDB";
 
 const StackDevski = () => {
     const [searchResults, setSearchResults] = useState([]);
+    const [searchResultsDB, setSearchResultsDB] = useState([]);
 
     return(
         <section className="stack-devski">
@@ -43,7 +45,13 @@ const StackDevski = () => {
                             <StackDevskiFAQ />
                         </Tab>
                         <Tab eventKey="regsrch" title="Search">
-                            <StackDevskiSearchBar setSearchResults={setSearchResults}/>
+                            <StackDevskiSearchBar setSearchResults={setSearchResults} setSearchResultsDB={setSearchResultsDB}/>
+                            <br />
+                            <h3>Local Devski Posts</h3>
+                            <StackDevskiSearchCardDB searchResultsDB={searchResultsDB}/>
+                            <hr />
+                            <br/>
+                            <h3>Search From stackOverflow</h3>
                             <StackDevskiSearchCard searchResults={searchResults}/>                   
                         </Tab>
                     </Tabs>

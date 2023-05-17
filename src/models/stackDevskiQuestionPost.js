@@ -24,14 +24,28 @@ export const createDevskiPost = async (post) => {
     window.location = "/stackDevski";
 }
 
-/* export const deleteDevskiPost = async (job) => {
+export const searchDevskiQuestions = async (searchTerm) => {
+    const{ data, error } = await supabase
+        .from('Questions')
+        .select('id, question_title, question_description')
+        .ilike("question_title", `%${searchTerm}%`)
+
+    if (error) {
+        console.error("Error searching Supabase:", error);
+        return null;
+    }
+
+    return data;
+}
+
+export const deleteDevskiPost = async (id) => {
     const { error } = await supabase
         .from('Questions')
         .delete()
-        .eq('id', job.id);
+        .eq('id', id);
 
     if (error) {
         console.log(error);
     }
     window.location = "/stackDevski";
-} */
+}
