@@ -10,11 +10,13 @@ import StackDevski from './pages/StackDevski';
 import Register from './pages/Register'
 import { supabase } from "./server/client.js"
 import Login from './components/Login';
-import Success from './components/Success';
 
+import Success from './components/Success';
 import JobFeedCreatePost from './pages/JobFeedCreatePost'
 import StackDevskiCreateQuestionAns from './pages/StackDevskiCreateQuestionAns';
 import Contact from './pages/Contact';
+
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   return (
@@ -24,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SplashHome/>} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/success" element={<Success/>}/>
+          <Route path="/success" element={<Success/>} />
           <Route path="/job-feed" element={<JobFeed/>} />
           <Route path="/new-job-post" element={<JobFeedCreatePost/>} />
           <Route path="/stackDevski" element={<StackDevski/>} />
