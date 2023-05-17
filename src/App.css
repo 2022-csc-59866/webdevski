@@ -454,7 +454,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   
 }
 
-.register-page-content, .login-page-content, .stackdevski-main-content, .jobfeed-createpost-page-content, .stackdevski-createpost-page-content{
+.login-page .login-content{
+  border-radius: 20px;
+  background-color: #6c757d2b;
+  box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  padding: 5px 20px 39px;
+}
+
+.login-page label, .login-page a{
+  color: white;
+  font-weight: 700;
+}
+
+.stackdevski-main-content, .jobfeed-createpost-page-content, .stackdevski-createpost-page-content{
   border-radius: 20px;
   background-color: #6c757d2b;
   box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
@@ -629,16 +643,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
 }
 
-.contact .contact-content .column.left.right{
+/* .contact .contact-content .column.left.right{
   width: calc(50% - 30px);
-}
+} */
 .contact .contact-content .text{
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 .contact .contact-content .left p{
-  text-align: justify;
+  text-align: center;
 }
 .contact .contact-content .left .icons{
   margin: 10px 0;
@@ -688,6 +702,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 17px;
   font-family: "Ubuntu", sans-serif;
   transition: all 0.3s ease;
+  color:black;  
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{

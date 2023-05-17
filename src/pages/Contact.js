@@ -12,27 +12,27 @@ const Contact = () => {
                 <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                    <p>Have a question or issue? Feel free to contact the BigDevski's</p>
                     <div class="icons">
                         <div class="row">
                         <i class="fas fa-user"></i>
                         <div class="info">
                             <div class="head">Company Owners</div>
-                            <div class="sub-title"></div>
+                            <div class="sub-title" style={{color: 'white'}}>Jacob, Radmir, Yevheniya</div>
                         </div>
                         </div>
                         <div class="row">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="info">
                             <div class="head">Address</div>
-                            <div class="sub-title">your moms basement</div>
+                            <div class="sub-title" style={{color: 'white'}}>Somewhere in the depths of CCNY</div>
                         </div>
                         </div>
                         <div class="row">
                         <i class="fas fa-envelope"></i>
                         <div class="info">
                             <div class="head">Email</div>
-                            <div class="sub-title">krasavchik@webdevski.com</div>
+                            <div class="sub-title" style={{color: 'white'}}>krasavchik@webdevski.com</div>
                         </div>
                         </div>
                     </div>

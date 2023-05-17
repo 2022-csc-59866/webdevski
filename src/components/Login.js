@@ -25,7 +25,7 @@ function Login() {
 
   return (
     <section className="login-page">
-      <div>
+      <div className="login-content">
           <Auth
             supabaseClient={supabase}
             appearance={{ theme: ThemeSupa }}
