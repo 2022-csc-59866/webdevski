@@ -6,6 +6,7 @@ import { readDevskiPosts } from "../models/stackDevskiQuestionPost";
 const StackDevskiSearchCardDB = ({searchResultsDB}) => {
 
     const[showModal, setShowModal] = useState(false);
+    const[showModal, setShowModal] = useState(false);
     const[selectedResult, setSelectedResult] = useState(null);
 
     const handleShowModal = (result) => {
@@ -21,7 +22,7 @@ const StackDevskiSearchCardDB = ({searchResultsDB}) => {
         event.preventDefault();
         deleteDevskiPost(id);
     }
-    
+
     return(
         <div className="row row-cols-1 row-cols-md-3 g-4">
             {searchResultsDB.length === 0 ? (
