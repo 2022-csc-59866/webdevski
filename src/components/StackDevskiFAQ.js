@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import SDFAQAns from "./SDFAQAns";
-
+import { fetchQuestions, fetchQuestionsCR, fetchQuestionsWM } from "../controllers/stackOverflow";
 
 const StackDevskiFAQ = () => {
     const[questions, setQuestions] = useState([]);
@@ -10,34 +9,25 @@ const StackDevskiFAQ = () => {
 
     useEffect(() => {
         const fetchData = async() => {
-            const response = await axios.get(
-                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=web&site=stackoverflow&filter=!6Wfm_gSvlYUX9`
-            );
-            setQuestions(response.data.items);
+            const data = await fetchQuestions();
+            setQuestions(data);
         };
-
         fetchData();
     }, []);
 
     useEffect(() => {
         const fetchCRData = async() => {
-            const response = await axios.get(
-                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=javascript&site=codereview&filter=!6Wfm_gSvlYUX9`
-            );
-            setQuestionsCR(response.data.items);
+            const data = await fetchQuestionsCR();
+            setQuestionsCR(data);
         };
-
         fetchCRData();
     }, []);
 
     useEffect(() => {
         const fetchWMData = async() => {
-            const response = await axios.get(
-                `https://api.stackexchange.com/2.3/questions?pagesize=10&order=desc&sort=hot&tagged=javascript&site=webmasters&filter=!6Wfm_gSvlYUX9`
-            );
-            setQuestionsWM(response.data.items);
+            const data = await fetchQuestionsWM();
+            setQuestionsWM(data);
         };
-
         fetchWMData();
     }, []);
 
@@ -57,7 +47,6 @@ const StackDevskiFAQ = () => {
             </div>
         </div>
     );
-
 }
 
 export default StackDevskiFAQ;
