@@ -13,6 +13,17 @@ import { readDevskiPosts } from "../models/stackDevskiQuestionPost";
 const StackDevski = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [searchResultsDB, setSearchResultsDB] = useState([]);
+    const [localDesvkiPosts, setLocalDevskiPosts] = useState([]);
+
+    useEffect(() => {
+        const fetchLocalPosts = async () => {
+            const data = await readDevskiPosts();
+            if (data) {
+                setLocalDevskiPosts(data);
+            }
+        };
+        fetchLocalPosts();
+    }, []);
 
     return(
         <section className="stack-devski">
@@ -49,7 +60,7 @@ const StackDevski = () => {
                             <StackDevskiSearchBar setSearchResults={setSearchResults} setSearchResultsDB={setSearchResultsDB}/>
                             <br />
                             <h3>Local Devski Posts</h3>
-                            <StackDevskiSearchCardDB searchResultsDB={searchResultsDB}/>
+                            <StackDevskiSearchCardDB searchResultsDB={searchResultsDB.length === 0 ? localDesvkiPosts : searchResultsDB}/>
                             <hr />
                             <br/>
                             <h3>Search From stackOverflow</h3>

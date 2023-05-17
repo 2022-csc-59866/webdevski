@@ -4,18 +4,18 @@ import { deleteDevskiPost } from "../models/stackDevskiQuestionPost";
 import { readDevskiPosts } from "../models/stackDevskiQuestionPost";
 
 const StackDevskiSearchCardDB = ({searchResultsDB}) => {
-    const [open, setOpen] = useState(false);
-    const [localDesvkiPosts, setLocalDevskiPosts] = useState([]);
+    // const [open, setOpen] = useState(false);
+    // const [localDesvkiPosts, setLocalDevskiPosts] = useState([]);
 
-    useEffect(() => {
-        const fetchLocalPosts = async () => {
-            const data = await readDevskiPosts();
-            if (data) {
-                setLocalDevskiPosts(data);
-            }
-        };
-        fetchLocalPosts();
-    }, []);
+    // useEffect(() => {
+    //     const fetchLocalPosts = async () => {
+    //         const data = await readDevskiPosts();
+    //         if (data) {
+    //             setLocalDevskiPosts(data);
+    //         }
+    //     };
+    //     fetchLocalPosts();
+    // }, []);
 /*     const[showModal, setShowModal] = useState(false);
     const[selectedResult, setSelectedResult] = useState(null);
 
@@ -33,16 +33,16 @@ const StackDevskiSearchCardDB = ({searchResultsDB}) => {
         deleteDevskiPost(id);
     }
 
-    const displayPosts = searchResultsDB.length > 0 ? searchResultsDB : localDesvkiPosts;
+    // const displayPosts = searchResultsDB.length > 0 ? searchResultsDB : localDesvkiPosts;
 
     return(
         <div className="row row-cols-1 row-cols-md-3 g-4">
-            {displayPosts.length === 0 ? (
+            {searchResultsDB.length === 0 ? (
                 <div className="col text-center">
                     <p>No Results Found</p>
                 </div>
             ) : (
-                displayPosts.map((result) => (
+                searchResultsDB.map((result) => (
                 <div className="col" key={result.id}>
                     <Button onClick={(e) => handleDeleteButton(e, result.id)}>Delete Post</Button>
                         <Card className="h-100">
@@ -51,10 +51,10 @@ const StackDevskiSearchCardDB = ({searchResultsDB}) => {
                                 {/*                             <Card.Subtitle>{result.is_answered ? "Question has Answer" : "Not Answered"}</Card.Subtitle>
                             <Card.Subtitle>Answer Count: {result.answer_count}</Card.Subtitle>
  */}                            {/* <Card.Text>{result.body}</Card.Text> */}
-                                {/* <Button variant="primary">
+                                 <Button variant="primary">
                                 View
-                            </Button> */}
-                                <Card.Text>
+                            </Button> 
+                                {/* <Card.Text>
                                     <Button onClick={() => setOpen(prevOpen => !prevOpen)} variant="primary">
                                         {open ? 'Hide' : 'View'}
                                     </Button>
@@ -63,7 +63,7 @@ const StackDevskiSearchCardDB = ({searchResultsDB}) => {
                                     <div className="mt-4">
                                         <Card.Text>{result.question_description}</Card.Text>
                                     </div>
-                                </Collapse>
+                                </Collapse> */}
                             </Card.Body>
                         </Card>
                     </div>
