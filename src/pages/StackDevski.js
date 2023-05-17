@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faConnectdevelop} from '@fortawesome/free-brands-svg-icons'
 import { Tab, Tabs, TabContent, TabPane, Alert} from "react-bootstrap"
@@ -8,6 +8,7 @@ import StackDevskiSearchBar from "../components/StackDevskiSearchBar";
 import StackDevskiSearchCard from "../components/StackDevskiSearchCard";
 import StackDevskiFAQ from "../components/StackDevskiFAQ";
 import StackDevskiSearchCardDB from "../components/StackDevskiSearchCardDB";
+import { readDevskiPosts } from "../models/stackDevskiQuestionPost";
 
 const StackDevski = () => {
     const [searchResults, setSearchResults] = useState([]);
