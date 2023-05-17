@@ -23,7 +23,7 @@ const StackDevski = () => {
             }
         };
         fetchLocalPosts();
-    }, []);
+    }, []); 
 
     return(
         <section className="stack-devski">

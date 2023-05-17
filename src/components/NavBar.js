@@ -44,18 +44,18 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                    <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
-                    <Nav.Link as={Link} to="/contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
                     <Nav.Link as={Link} to="/job-feed" className={activeLink === 'job-feed' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('job-feed')}>Job Feed</Nav.Link>
                     <Nav.Link as={Link} to="/stackDevski" className={activeLink === 'stackDevski' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('stackDevski')}>stackDevski</Nav.Link>
-
+                    <Nav.Link as={Link} to="/contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
+                    
                 </Nav>
                 <span className="navbar-text">
                     <div className="social-icon">
                         <a href="#"><FontAwesomeIcon className="ficon" icon={faFacebook}></FontAwesomeIcon></a>
                         <a href="#"><FontAwesomeIcon className="ficon" icon={faInstagram}></FontAwesomeIcon></a>
                         <a href="#"><FontAwesomeIcon className="ficon" icon={faDiscord}></FontAwesomeIcon></a>
-                    </div>    
+                    </div>
+                        <Link as={Link} to="/success" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}><button className="vvd">Log OUT</button></Link>    
                         <Link to="/login">
                             <button className="vvd" onClick={() => console.log('connect')}><span>Sign In</span></button>
                         </Link>
