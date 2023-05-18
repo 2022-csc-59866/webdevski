@@ -1,3 +1,7 @@
+# WEBDEVSKI
+
+Web and Frontend Development Hub for job search and coding assistance
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
